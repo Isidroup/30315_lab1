@@ -1,0 +1,78 @@
+# Archivos de sesión de Vivado
+vivado.log
+vivado.jou
+*.str
+*.wdb
+
+# Directorios de ejecución
+*.runs/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.xpr
+*.xpr.lock
+
+# Resultados de síntesis e implementación
+*.dcp
+*.ncd
+*.ngc
+*.ngd
+*.edf
+*.svf
+*.bit
+*.bin
+*.mmi
+*.rpt
+*.xml
+
+# Archivos temporales
+*.tmp
+*.bak
+*.jou
+*.log
+*.pb
+*.zip
+
+# Configuración local de usuario
+*.xsa
+*.xpe
+*.xpf
+*.xpfm
+*.xci
+*.xpr.user
+*.xpr.backup
+
+# Carpetas de proyecto generadas automáticamente
+/.Xil/
+
+
+# =========================
+# ModelSim / QuestaSim
+# =========================
+# Work library
+/work/
+work/
+
+# Archivos de simulación
+*.wlf
+*.vstf
+*.vcd
+*.asdb
+*.dat
+*.do
+*.ini
+*.mpf
+*.mti
+*.log
+
+# Bases de datos de simulación
+*.db
+*.dsn
+*.idx
+
+# Archivos temporales
+*.bak
+*.tmp
+*.err
+*.out
