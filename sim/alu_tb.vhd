@@ -2,14 +2,13 @@
 -- Design Name   : Test bench alu
 -- File Name     : alu_tb.vhd
 -- Created       :
--- Last modified : 2025/12/18 20:06:27
+-- Last modified : 2026/01/25 21:11:46
 -- Author        :
 -- Version       :
 --------------------------------------------------------------------------------
 
 library ieee;
     use ieee.std_logic_1164.all;
-    use ieee.numeric_std.all;
 
 entity alu_tb is
 --  Port ( );
@@ -17,7 +16,7 @@ end alu_tb;
 
 architecture Behavioral of alu_tb is
 
-    -- Definici�n del componente alu
+    -- Definición del componente alu
     component alu
         port (
             A      : in    std_logic_vector(7 downto 0);
@@ -29,9 +28,9 @@ architecture Behavioral of alu_tb is
     end component;
 
     -- Señales internas
-    signal a_tb      : unsigned(7 downto 0);
-    signal b_tb      : unsigned(7 downto 0) := "00000000";
-    signal alu_tb    : unsigned(1 downto 0) := "10";
+    signal a_tb      : std_logic_vector(7 downto 0);
+    signal b_tb      : std_logic_vector(7 downto 0) := "00000000";
+    signal alu_tb    : std_logic_vector(1 downto 0) := "10";
     signal salida_tb : std_logic_vector(7 downto 0);
     signal z_tb      : std_logic;
 
@@ -40,9 +39,9 @@ begin
     -- Instanciación del componente
     ALU_0 : alu
         port map (
-            A      => std_logic_vector(a_tb),
-            B      => std_logic_vector(b_tb),
-            ALU    => std_logic_vector(alu_tb),
+            A      => a_tb,
+            B      => b_tb,
+            ALU    => alu_tb,
             SALIDA => salida_tb,
             Z      => z_tb
         );
@@ -52,9 +51,9 @@ begin
     begin
 
         -- Suma
-        
+
         b_tb   <= x"03";
-        alu_tb <= "00";
+        alu_tb <= x"00";
         wait for 200 ns;
 
         -- XOR
@@ -68,7 +67,7 @@ begin
         b_tb   <= x"00";
         alu_tb <= "00";
         wait for 200 ns;
-        
+
         -- Paso directo de B
         a_tb   <= x"AA";
         b_tb   <= x"55";
