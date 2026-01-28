@@ -24,4 +24,4 @@ add_files -fileset sim_1 [file normalize "$project_dir/../sim"]
 add_files -fileset constrs_1 [file normalize "$project_dir/../constraints"]
 
 # 5.1 EL fichero de localizaciones no se usa en síntesis
-set_property used_in_synthesis false [get_files  "$script_dir/../constraints/lab1_loc.xdc"]
+set_property used_in_synthesis false [get_files  "$script_dir/../constraints/02_basys3_io.xdc"]
