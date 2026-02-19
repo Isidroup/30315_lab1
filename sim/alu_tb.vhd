@@ -16,7 +16,7 @@ end alu_tb;
 
 architecture Behavioral of alu_tb is
 
-    -- DefiniciÃ³n del componente alu
+    -- Definición del componente alu
     component alu
         port (
             A      : in    std_logic_vector(7 downto 0);
@@ -27,7 +27,7 @@ architecture Behavioral of alu_tb is
         );
     end component;
 
-    -- SeÃ±ales internas
+    -- Señales internas
     signal a_tb      : std_logic_vector(7 downto 0);
     signal b_tb      : std_logic_vector(7 downto 0) := "00000000";
     signal alu_tb    : std_logic_vector(1 downto 0) := "10";
@@ -36,7 +36,7 @@ architecture Behavioral of alu_tb is
 
 begin
 
-    -- InstanciaciÃ³n del componente
+    -- Instanciación del componente
     ALU_0 : alu
         port map (
             A      => a_tb,
@@ -46,7 +46,7 @@ begin
             Z      => z_tb
         );
 
-    -- Proceso de estÃ­mulo
+    -- Proceso de estímulo
     stim_proc : process
     begin
 
@@ -74,9 +74,10 @@ begin
         alu_tb <= "10";
         wait for 200 ns;
 
-        -- Fin de simulaciÃ³n
+        -- Fin de simulación
         wait;
 
     end process stim_proc;
 
 end Behavioral;
+

@@ -1,6 +1,6 @@
 # --------------------------------------------------------------------------------
 # Archivo: 02_basys3_io.xdc
-# Descripci√≥n: Asignaci√≥n de pines y configuraci√≥n de voltaje para Basys3
+# DescripciÛn: AsignaciÛn de pines y configuraciÛn de voltaje para Basys3
 # --------------------------------------------------------------------------------
 
 ## Switches (Entradas A y B)
@@ -39,23 +39,24 @@ set_property PACKAGE_PIN XXX [get_ports {SALIDA[7]}]
 set_property PACKAGE_PIN XXX  [get_ports {Z}]
 
 # --------------------------------------------------------------------------
-# Configuraci√≥n El√©ctrica y de Dispositivo
+# ConfiguraciÛn ElÈctrica y de Dispositivo
 # --------------------------------------------------------------------------
 
-# Est√°ndar I/O: Aplicamos LVCMOS33 a todos los puertos
-# Configuraci√≥n para Entradas (Switches y Botones)
+# Est·ndar I/O: Aplicamos LVCMOS33 a todos los puertos
+# ConfiguraciÛn para Entradas (Switches y Botones)
 set_property IOSTANDARD LVCMOS33 [get_ports {A[*] B[*] ALU[*]}]
-# Configuraci√≥n para Salidas (LEDs)
+# ConfiguraciÛn para Salidas (LEDs)
 set_property IOSTANDARD LVCMOS33 [get_ports {SALIDA[*] Z}]
 
-# Configuraci√≥n de compresi√≥n de Bitstream y Voltaje de Bancos
+# ConfiguraciÛn de compresiÛn de Bitstream y Voltaje de Bancos
 set_property CFGBVS VCCO [current_design]
 set_property CONFIG_VOLTAGE 3.3 [current_design]
 
 # --------------------------------------------------------------------------
-# NOTA SOBRE LA ASIGNACI√ìN DE PINES:
-# La asignaci√≥n de pines y la configuraci√≥n el√©ctrica aqu√≠ definidas
-# est√°n espec√≠ficamente adaptadas para la placa Basys3. Al utilizar
+# NOTA SOBRE LA ASIGNACI”N DE PINES:
+# La asignaciÛn de pines y la configuraciÛn elÈctrica aquÌ definidas
+# est·n especÌficamente adaptadas para la placa Basys3. Al utilizar
 # una FPGA diferente o una placa distinta, es necesario consultar la
-# documentaci√≥n del fabricante para asegurar una asignaci√≥n correcta
-# de pines y una configuraci√≥n adecuada de los est√°ndares el√©ctricos.
+# documentaciÛn del fabricante para asegurar una asignaciÛn correcta
+# de pines y una configuraciÛn adecuada de los est·ndares elÈctricos.
+
